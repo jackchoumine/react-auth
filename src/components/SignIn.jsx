@@ -18,6 +18,17 @@ export function SignIn({ onSignIn }) {
   return (
     <Container component='main' maxWidth='xs'>
       <div className={classes.paper}>
+        <p>
+          <a href='https://jackchoumine.github.io/react-container/'>集成后的页面</a>
+          <br />
+          <a href='https://jackchoumine.github.io/react-marketing/'>marketing-react 微应用</a>
+          <br />
+          <a href='https://jackchoumine.github.io/vue3-dashboard/'>vue3-dashboard 微应用</a>
+          <br />
+          <a href='https://jackchoumine.github.io/react-auth/'>react-auth 微应用]</a>
+          <br />
+          <hr />
+        </p>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
