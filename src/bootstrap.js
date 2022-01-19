@@ -33,14 +33,16 @@ const mount = (el, { onSignIn, onChildNavigate, defaultHistory, currentPathParen
 
 // If we are in development and in isolation,
 // call mount immediately
-if (process.env.NODE_ENV === 'development') {
-  const el = document.getElementById('_auth-dev-root')
-  const history = createBrowserHistory()
-  function onSignIn(user) {
-    console.log('sign in', user)
-  }
-  el && mount(el, { defaultHistory: history, onSignIn })
+// if (process.env.NODE_ENV === 'development') {
+// FIXME 独立部署，不会执行这里
+const el = document.getElementById('_auth-dev-root')
+console.log(el)
+const history = createBrowserHistory()
+function onSignIn(user) {
+  console.log('sign in', user)
 }
+el && mount(el, { defaultHistory: history, onSignIn })
+// }
 
 // We are running through container
 // and we should export the mount function
